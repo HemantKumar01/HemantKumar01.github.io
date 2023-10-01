@@ -60,7 +60,7 @@ login_form.querySelector("#forgot-password-link").onclick = (e) => {
   </div>
   <input type="submit" value="Send Reset Link" />
   <hr class="or" />
-  <a href="./login.html" class="login-flow">Login</a>
+  <a href="login.html" class="login-flow">Login</a>
   `;
   isPasswordResetForm = true;
 };
