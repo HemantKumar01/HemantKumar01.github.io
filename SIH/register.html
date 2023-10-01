@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="login.css" />
   </head>
   <body>
+    <div id="main-loader" class="loader">
+      <div class="spinner"></div>
+    </div>
     <header class="flexbox">
       <a href="/" id="home-link"
         ><i class="fa-solid fa-house" aria-hidden="true"></i
@@ -72,7 +75,11 @@
         </div>
       </div>
     </form>
-
+    <script>
+      window.onload = () => {
+        document.querySelector("#main-loader").style.display = "none";
+      };
+    </script>
     <script src="firebase.js"></script>
     <script src="register.js"></script>
   </body>
