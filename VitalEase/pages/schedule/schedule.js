@@ -18,6 +18,7 @@ const colors = ["#FFA800", "#00D1FF", "#FF9AE9", "#00b68e", "#e098ff"];
 const scheduleContainer = document.querySelector(".schedule");
 function updateSchedule() {
   let currentTime = new Date();
+  scheduleContainer.innerHTML = "";
 
   schedule.sort((a, b) => {
     if (a.time.hour != b.time.hour) return a.time.hour - b.time.hour;
