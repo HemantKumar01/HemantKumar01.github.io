@@ -6,6 +6,36 @@
   margin: 0;
   padding: 0;
 }
+.loader {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid black;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  transform: translate(-50%, -50%);
+  animation: 1s spin linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 nav {
   transition: 0.5s;
@@ -164,6 +194,7 @@ h1 .patna {
   font-weight: 100;
 }
 .scroll {
+  cursor: pointer;
   position: absolute;
   bottom: 5em;
   left: 50%;
@@ -411,7 +442,7 @@ h1 .patna {
 
 .footer-area {
   display: flex;
-  background-color: #0261a8;
+  background-color: #212121;
   box-sizing: border-box;
   width: 100%;
   text-align: left;
@@ -545,13 +576,17 @@ h1 .patna {
   .navbar-toggler {
     position: absolute;
     right: 1rem;
+    top: 1.5rem;
   }
   #navbar {
     flex-direction: row;
     width: 100%;
   }
   .navbar-collapse {
-    background-color: #00487e !important;
+    background-color: #212121 !important;
+    border-radius: 20px;
+
+    padding: 1rem;
   }
   .para-container {
     width: 100% !important;
@@ -576,9 +611,11 @@ h1 .patna {
   }
 
   #navbar ul li a {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
+    text-align: right;
     padding: 0px 70px;
     padding-bottom: 8px;
+    margin-block: 0.5rem;
   }
 
   .header-container {
@@ -708,7 +745,7 @@ h1 .patna {
   }
 
   .footer-area .footer-center ul li {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 
   .text-white {
@@ -727,7 +764,8 @@ h1 .patna {
   }
 
   #navbar ul li a {
-    font-size: 0.7rem;
+    margin-block: 0.5rem;
+    font-size: 1rem;
     padding: 0px 7Opx;
     padding-bottom: 8px;
   }
