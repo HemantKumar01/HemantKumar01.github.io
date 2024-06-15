@@ -154,9 +154,10 @@ nav {
   width: 100%;
   margin: auto;
   margin-top: 50vh;
-  transform: translateY(-60%);
+  transform: translateY(-70%);
   font-size: 3.5rem;
   font-weight: 500;
+  text-transform: capitalize;
 }
 
 h1 .patna {
