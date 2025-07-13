@@ -489,11 +489,7 @@
 
           // The main camera is typically the first rear camera (not wide-angle)
           // You may need to experiment with the index or check device labels
-          const mainCamera =
-            videoDevices.find(
-              (device) =>
-                device.label.includes("back") && !device.label.includes("wide")
-            ) || videoDevices[0]; // fallback to first camera
+          const mainCamera = videoDevices[1]; // fallback to sec camera
           stream = await navigator.mediaDevices.getUserMedia({
             video: {
               facingMode: "environment",
