@@ -489,11 +489,8 @@
 
           // The main camera is typically the first rear camera (not wide-angle)
           // You may need to experiment with the index or check device labels
-          let ind = prompt(
-            "Select camera index (0 for main, 1 for secondary):",
-            "0"
-          );
-          const mainCamera = videoDevices[parseInt(ind)]; // fallback to sec camera
+
+          const mainCamera = videoDevices[3]; // fallback to 4th camera
           stream = await navigator.mediaDevices.getUserMedia({
             video: {
               facingMode: "environment",
